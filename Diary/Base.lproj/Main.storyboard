@@ -21,7 +21,7 @@
                                 <rect key="frame" x="0.0" y="88" width="414" height="725"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <collectionViewFlowLayout key="collectionViewLayout" automaticEstimatedItemSize="YES" minimumLineSpacing="10" minimumInteritemSpacing="10" id="OuR-7f-aBL">
-                                    <size key="itemSize" width="128" height="128"/>
+                                    <size key="itemSize" width="180" height="200"/>
                                     <size key="headerReferenceSize" width="0.0" height="0.0"/>
                                     <size key="footerReferenceSize" width="0.0" height="0.0"/>
                                     <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
@@ -58,6 +58,10 @@
                                             </constraints>
                                         </collectionViewCellContentView>
                                         <size key="customSize" width="180" height="200"/>
+                                        <connections>
+                                            <outlet property="dateLabel" destination="czI-NN-srn" id="y72-IO-4c8"/>
+                                            <outlet property="titleLabel" destination="Vdj-9Z-6SI" id="l8p-Wq-Frb"/>
+                                        </connections>
                                     </collectionViewCell>
                                 </cells>
                             </collectionView>
@@ -78,6 +82,9 @@
                             </connections>
                         </barButtonItem>
                     </navigationItem>
+                    <connections>
+                        <outlet property="collectionView" destination="hqB-j2-Ke4" id="Swz-7h-pHA"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
@@ -155,8 +162,18 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="일기 작성" id="Q0G-Ki-saP">
-                        <barButtonItem key="rightBarButtonItem" title="등록" id="quB-He-QCc"/>
+                        <barButtonItem key="rightBarButtonItem" title="등록" id="quB-He-QCc">
+                            <connections>
+                                <action selector="tapConfirmButton:" destination="Pvl-WO-deC" id="Ft9-ks-qRb"/>
+                            </connections>
+                        </barButtonItem>
                     </navigationItem>
+                    <connections>
+                        <outlet property="confirmButton" destination="quB-He-QCc" id="sba-tn-R9O"/>
+                        <outlet property="contentsTextView" destination="aej-Eb-Qb3" id="KaN-bW-PdK"/>
+                        <outlet property="dateTextField" destination="Bbe-2R-laA" id="EzP-gL-B5p"/>
+                        <outlet property="titleTextField" destination="gXP-wG-zQ4" id="KHw-r6-XX2"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="I6k-7y-fdf" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
