@@ -272,10 +272,6 @@
                                                             <nil key="highlightedColor"/>
                                                         </label>
                                                     </subviews>
-                                                    <constraints>
-                                                        <constraint firstAttribute="trailing" secondItem="9zt-5u-k2s" secondAttribute="trailing" constant="24" id="IAJ-Kv-qLK"/>
-                                                        <constraint firstItem="9zt-5u-k2s" firstAttribute="leading" secondItem="eJW-BS-6qx" secondAttribute="leading" constant="24" id="iw6-HB-dco"/>
-                                                    </constraints>
                                                 </stackView>
                                             </subviews>
                                             <constraints>
@@ -285,6 +281,10 @@
                                             </constraints>
                                         </collectionViewCellContentView>
                                         <size key="customSize" width="414" height="80"/>
+                                        <connections>
+                                            <outlet property="dateLabel" destination="bRo-HO-Iiv" id="N8K-6i-fSK"/>
+                                            <outlet property="titleLabel" destination="9zt-5u-k2s" id="5qZ-f8-LcJ"/>
+                                        </connections>
                                     </collectionViewCell>
                                 </cells>
                             </collectionView>
@@ -299,6 +299,9 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="52V-Go-HJL"/>
+                    <connections>
+                        <outlet property="collectionView" destination="pQl-Yp-Sl7" id="ehy-05-qMm"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="knD-iB-AAc" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
